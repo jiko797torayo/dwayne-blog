@@ -1,0 +1,9 @@
+<div class="contents row">
+  <div class="container">
+    <%= form_for @article, :url => {:action => :update} do |f| %>
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+      <%= f.submit "編集" %>
+    <% end %>
+  </div>
+</div>

@@ -6,8 +6,7 @@
         <p><%= article.body %></p>
       </div>
       <div class="card-action">
-        <a href="#">This is a link</a>
-        <a href="#">This is a link</a>
+        <%= link_to '編集', edit_user_article_path(article.user_id, article.id), method: :get %></li>
       </div>
     </div>
   </div>
