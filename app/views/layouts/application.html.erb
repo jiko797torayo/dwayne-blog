@@ -19,8 +19,14 @@
     <div class="nav-wrapper cyan lighten-2">
       <a href="#" class="brand-logo">Logo</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to 'Sign-Out', destroy_user_session_path, method: :delete %></li>
-        <li><a href="collapsible.html">New</a></li>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to 'Sign-Out', destroy_user_session_path, method: :delete %></li>
+          <% end %>
+        <li>
+          <% if user_signed_in? %>
+            <%= link_to '投稿する', new_user_article_path(current_user.id), method: :get %></li>
+          <% end %>
         <li><a href="collapsible.html">Mode:D</a></li>
       </ul>
     </div>

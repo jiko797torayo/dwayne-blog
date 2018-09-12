@@ -1,1 +1,6 @@
-<%= render partial: "./articles/index" %>
+<div class="wrapper">
+  <% @articles.each do |article| %>
+    <%= render partial: "./articles/index", locals: {article: article} %>
+  <% end %>
+</div>
+
