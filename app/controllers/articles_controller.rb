@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  # before_action :authenticate_user!
   def index
   end
 
@@ -13,18 +14,29 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    unless user_signed_in? && @article.user_id == current_user.id
+      redirect_to new_user_session_path
+    end
   end
 
   def update
     article = Article.find(params[:id])
-    article.update(article_params)
-    redirect_to root_path
+    if user_signed_in? && article.user_id == current_user.id
+      article.update(article_params)
+      redirect_to root_path
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def destroy
     article = Article.find(params[:id])
-    article.destroy
-    redirect_to root_path
+    if user_signed_in? && article.user_id == current_user.id
+      article.destroy
+      redirect_to root_path
+    else
+      redirect_to new_user_session_path
+    end
   end
   private
   def article_params
