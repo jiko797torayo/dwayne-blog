@@ -1,14 +1,20 @@
-.dwayne {
-  width: 1000px;
-  height: 1000px;
+.dwayne1 {
   float: left;
   position: fixed;
-  //background: #B00100;
-  background-image: url("http://moongoose2.com/wp-content/uploads/2018/04/cena-rock-1024x576-678x381.jpg");
   z-index: 1;
   display: none;
 }
 
+.dwayne2 {
+  float: left;
+  position: fixed;
+  z-index: 2;
+}
+
 .go {
   display: block;
+}
+
+.hide {
+  display: none;
 }
