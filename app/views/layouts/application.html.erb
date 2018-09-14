@@ -18,8 +18,8 @@
 </head>
 <body>
   <nav>
-    <div class="nav-wrapper cyan lighten-2">
-      <p class="brand-logo">Logo</p>
+    <div class="nav-wrapper grey lighten-1">
+      <p class="brand-logo">Dwayne Blog　<span class="subtitle">〜If you smell what The Rock is cookin'!〜</span</p>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li>
           <% unless user_signed_in? %>
@@ -32,11 +32,9 @@
           <% if user_signed_in? %>
             <%= link_to '投稿する', new_user_article_path(current_user.id), method: :get %></li>
           <% end %>
-        <li><a href="collapsible.html">Mode:D</a></li>
       </ul>
     </div>
   </nav>
-  <div class="dwayne"></div>
   <%= yield %>
 </body>
 </html>
