@@ -1,13 +1,13 @@
 
 <div class="row">
   <div class="col s12">
-    <div class="card blue-grey darken-1">
+    <div class="card">
       <div class="card-content white-text">
         <p><%= article.body %></p>
       </div>
-      <div class="card-action">
-        <%= link_to '編集', edit_user_article_path(article.user_id, article.id), method: :get %></li>
-        <%= link_to '削除', user_article_path(article.user_id, article.id), method: :delete %></li>
+      <div class="action-btn">
+        <%= link_to '編集', edit_user_article_path(article.user_id, article.id), method: :get, style: "color:white" %>
+        <%= link_to '削除', user_article_path(article.user_id, article.id), method: :delete, style: "color:white" %>
       </div>
     </div>
   </div>
