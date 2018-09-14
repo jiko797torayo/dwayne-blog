@@ -2,7 +2,7 @@ $(function() {
     $(".action-btn").on("click", function () {
         var c_id = gon.current_id;
         if(c_id != 1) {
-            $(".dwayne").addClass("go");
+            $(".dwayne1").addClass("go");
             return false;
         }
     });
