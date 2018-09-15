@@ -1,7 +1,7 @@
 $(function() {
     $(".action-btn").on("click", function () {
-        var c_id = gon.current_id;
-        if(c_id != 1) {
+        var c_u_id = gon.current_user_id;
+        if(c_u_id != 1) {
             $(".dwayne1").addClass("go");
             return false;
         }

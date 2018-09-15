@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def index
     @articles = Article.all.order("created_at DESC")
     if user_signed_in?
-      gon.current_id = current_user.id
+      gon.current_user_id = current_user.id
     end
   end
 end
